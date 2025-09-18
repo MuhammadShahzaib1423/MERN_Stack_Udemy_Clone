@@ -3,6 +3,7 @@ import { dummyCourses } from "../Component/Assets/assets";
 import { useNavigate } from "react-router-dom";
 import humanizeDuration from "humanize-duration";
 import {Line} from 'rc-progress';
+import React from "react";
 export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {

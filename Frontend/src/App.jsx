@@ -15,7 +15,7 @@ import AddCourse from './pages/educator/AddCourse';
 import MyCourses from './pages/educator/MyCourses';
 import StudentEnrolled from './pages/educator/StudentEnrolled';
 import Navbar from './Component/student/Navbar';
-
+import React from "react";
 function App() {
   const [count, setCount] = useState(0)
 
