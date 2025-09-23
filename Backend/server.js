@@ -11,7 +11,10 @@ connectionDb();
 app.use(express.json());
 
 app.use(cors());
-app.use('/api/course',require('./routes/course'));
+// app.use('/api/course',require('./routes/course'));
+app.get('/',(req,res)=>{
+    res.send("API is running....");
+});
 app.use('/api/user',require('./routes/userroutes'));
 
 
