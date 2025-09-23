@@ -4,10 +4,6 @@ const dotenv = require('dotenv').config();
 const app =express();
 const connectionDb = require('./config/connectiondb.js');
 
-
- 
-
-
 connectionDb();
 app.use(express.json());
 
