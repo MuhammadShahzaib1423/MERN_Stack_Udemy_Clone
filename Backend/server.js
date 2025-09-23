@@ -1,12 +1,13 @@
 const express = require('express');
-const app =express();
-const dotenv = require('dotenv').config();
-const connectionDb = require('./config/connectiondb.js');
 const cors = require('cors');
+const dotenv = require('dotenv').config();
+const app =express();
+const connectionDb = require('./config/connectiondb.js');
+
 
  
 
-const PORT =process.env.PORT || 3000;
+
 connectionDb();
 app.use(express.json());
 
@@ -18,8 +19,9 @@ app.get('/',(req,res)=>{
 });
 app.use('/user',require('./routes/userroutes'));
 
+const PORT =process.env.PORT || 3000;
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
-});
+})
 
  
