@@ -100,7 +100,7 @@ const CourseDetails = () => {
                   <div
                     className="flex items-center justify-between px-4 py-3 cursor-pointer select-none"
                     onClick={() => toggleSection(index)}
-                  >
+                  > 
                     <div className="flex items-center gap-2">
                       <img
                         className={`transform transition-transform duration-300 ${
@@ -265,7 +265,7 @@ const CourseDetails = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </>  
   ) : (
     <Loading />
   );

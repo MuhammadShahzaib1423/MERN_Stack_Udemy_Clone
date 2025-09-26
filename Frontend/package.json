@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.47.0",
     "@tailwindcss/vite": "^4.1.13",
+    "axios": "^1.12.2",
     "framer-motion": "^12.23.14",
     "gsap": "^3.13.0",
     "humanize-duration": "^3.33.1",
@@ -24,6 +25,7 @@
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.1",
     "react-simple-star-rating": "^5.1.7",
+    "react-toastify": "^11.0.5",
     "react-youtube": "^10.1.0",
     "tailwindcss": "^4.1.13",
     "uniqid": "^5.4.0"
