@@ -1,39 +1,34 @@
+import mongoose from "mongoose";
 
-const mongoose = require('mongoose');
-
-
-
-const userSchema = new mongoose.Schema({
-    _id:{
-        type:String,
-        required:true
+const userSchema = new mongoose.Schema(
+  {
+    _id: {
+      type: String, // Clerk user ID
+      required: true,
     },
-    name: { 
-        type: String,
-        required: true
+    name: {
+      type: String,
+      required: true,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true
+      type: String,
+      required: true,
+      unique: true,
     },
-    password: {
-        type: String,
-        required: true
+    imageUrl: {
+      type: String,
+      required: true,
     },
-    imageUrl:{
-        type:String,
-        required:true,
-    },
-    enrolledCourses:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Course'
-        }
+    enrolledCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
     ],
-   
-},{timestamps:true});
+  },
+  { timestamps: true }
+);
 
+const User = mongoose.model("User", userSchema);
 
-
-module.exports = mongoose.model('User', userSchema);
+export default User; // ✅ ESM export

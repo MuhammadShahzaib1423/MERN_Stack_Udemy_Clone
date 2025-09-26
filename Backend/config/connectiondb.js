@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+// config/connectiondb.js
+import mongoose from "mongoose";
 
-const connectiondb = async () => {
+const connectionDb = async () => {
   try {
     await mongoose.connect(process.env.CONNECTION_STRING, {
       useNewUrlParser: true,
@@ -12,4 +13,4 @@ const connectiondb = async () => {
   }
 };
 
-module.exports = connectiondb;
+export default connectionDb;

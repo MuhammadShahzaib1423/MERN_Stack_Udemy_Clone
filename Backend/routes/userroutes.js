@@ -1,8 +1,8 @@
-const { clerkWebhooks } = require("../controllers/webhooks");
+import express from 'express';
+import { getUserData, purchaseCourse, userEnrolledCourses } from '../controllers/User.js';
+const userRoutes = express.Router();
 
-const express = require("express");
-const {registerUser, loginUser}= require("../controllers/User");
-const router = express.Router();
-router.post('/clerk',express.json(),clerkWebhooks)
-
-module.exports = router;
+userRoutes.get('/data', getUserData);
+userRoutes.get('/enrolled-courses', userEnrolledCourses);
+userRoutes.post('/purchase', purchaseCourse);
+export default userRoutes;

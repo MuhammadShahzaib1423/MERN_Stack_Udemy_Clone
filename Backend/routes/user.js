@@ -1,8 +1,10 @@
-import { clerkWebhooks } from "../controllers/webhooks";
+// routes/userRoutes.js
+import express from "express";
+import { registerUser, loginUser } from "../controllers/User.js";
 
-const express = require("express");
-const {registerUser, loginUser}= require("../controllers/User");
 const router = express.Router();
-router.post('/clerk',express.json(),clerkWebhooks)
 
-module.exports = router;
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+
+export default router;

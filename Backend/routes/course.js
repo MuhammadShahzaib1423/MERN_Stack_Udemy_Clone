@@ -1,10 +1,8 @@
-const express = require('express');
-const { createCourse,getAllCourses,getCourseById } = require('../controllers/Course');
-const router = express.Router();
+import express from 'express';
+import { getAllCourse, getCourseId } from '../controllers/Course.js';
 
+const courseRouter = express.Router();
+courseRouter.get('/all', getAllCourse);
+courseRouter.get('/:id',getCourseId);
 
-router.post('/create-course', createCourse);
-router.get('/get-courses', getAllCourses);
-router.get('/get-course/:id', getCourseById);
-
-module.exports = router;
+export default courseRouter;
